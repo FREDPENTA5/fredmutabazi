@@ -138,7 +138,6 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   z-index: 1000;
   transition: all var(--duration) var(--ease);
-  padding-top: env(safe-area-inset-top);
 }
 
 .navbar.scrolled {
@@ -982,6 +981,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 640px) {
+  .nav-container { height: 48px; }
   .nav-links {
     position: fixed;
     top: 64px; left: 0; right: 0;
