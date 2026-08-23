@@ -686,19 +686,6 @@ ul { list-style: none; }
   transition: border-color var(--duration) var(--ease), box-shadow 0.5s var(--ease), transform 0.5s var(--ease);
 }
 
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 3px; height: 0%;
-  background: var(--maroon);
-  transition: height 0.4s var(--ease);
-  border-radius: 0 0 3px 0;
-}
-
-.project-card:hover::before {
-  height: 100%;
-}
 
 .project-card:hover {
   border-color: var(--maroon-10);
