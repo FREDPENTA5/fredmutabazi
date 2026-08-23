@@ -131,12 +131,13 @@ ul { list-style: none; }
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--grey-200);
-  transition: box-shadow var(--duration) var(--ease), background var(--duration) var(--ease);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: all var(--duration) var(--ease);
 }
 
 .navbar.scrolled {
@@ -267,6 +268,29 @@ ul { list-style: none; }
   pointer-events: none;
   z-index: 0;
   animation: float 8s ease-in-out infinite;
+}
+
+/* NOISE OVERLAY */
+.noise-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes float {
@@ -689,8 +713,23 @@ ul { list-style: none; }
 
 .project-card:hover {
   border-color: var(--maroon-10);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 0 0 1px var(--maroon-20), var(--shadow-lg);
   transform: translateY(-5px);
+}
+
+/* Subtle inner glow for project cards */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 40px rgba(128, 0, 0, 0);
+  transition: box-shadow 0.5s var(--ease);
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  box-shadow: inset 0 0 40px rgba(128, 0, 0, 0.03);
 }
 
 /* Numbered badge replaces category badge */
