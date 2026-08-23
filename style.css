@@ -149,7 +149,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 52px;
 }
 
 .nav-logo {
@@ -166,7 +166,7 @@ ul { list-style: none; }
 .logo-wrapper {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+
 }
 
 .logo-subtext {
@@ -961,7 +961,7 @@ ul { list-style: none; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
-  .nav-container { height: 52px; }
+  .nav-container { height: 48px; }
   .hero { min-height: auto; padding-top: 52px; padding-bottom: 60px; align-items: flex-start; }
   .hero-container {
     grid-template-columns: 1fr;
@@ -981,7 +981,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 640px) {
-  .nav-container { height: 48px; }
+  .nav-container { height: 44px; }
   .nav-links {
     position: fixed;
     top: 64px; left: 0; right: 0;
