@@ -33,9 +33,9 @@
   --fs-lg:        1.25rem;
   --fs-xl:        1.5rem;
   --fs-2xl:       2rem;
-  --fs-3xl:       2.75rem;
-  --fs-4xl:       3.75rem;
-  --fs-5xl:       4.5rem;
+  --fs-3xl:       2.5rem;
+  --fs-4xl:       3.25rem;
+  --fs-5xl:       3.8rem;
   --fw-light:     300;
   --fw-regular:   400;
   --fw-medium:    500;
@@ -250,10 +250,10 @@ ul { list-style: none; }
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
-  padding-top: 64px;
+  padding-top: 40px;
   overflow: hidden;
   background: var(--white);
 }
@@ -279,10 +279,10 @@ ul { list-style: none; }
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-4xl);
+  gap: var(--space-2xl);
   align-items: center;
-  padding-top: var(--space-4xl);
-  padding-bottom: var(--space-4xl);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }
 
 .hero-overline {
@@ -674,7 +674,7 @@ ul { list-style: none; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
+  gap: var(--space-lg);
 }
 
 .project-card {
@@ -726,7 +726,7 @@ ul { list-style: none; }
 }
 
 .project-card-content {
-  padding: var(--space-2xl);
+  padding: var(--space-xl);
 }
 
 .project-title {
