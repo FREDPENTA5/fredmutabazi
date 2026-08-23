@@ -22,7 +22,10 @@
   --maroon-10:    rgba(123, 45, 59, 0.08);
   --maroon-20:    rgba(123, 45, 59, 0.15);
 
-  --font:         'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Font stack: Outfit for display, Inter for body */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
   --fs-xs:        0.75rem;
   --fs-sm:        0.875rem;
   --fs-base:      1rem;
@@ -30,13 +33,15 @@
   --fs-lg:        1.25rem;
   --fs-xl:        1.5rem;
   --fs-2xl:       2rem;
-  --fs-3xl:       2.5rem;
-  --fs-4xl:       3.25rem;
+  --fs-3xl:       2.75rem;
+  --fs-4xl:       3.75rem;
+  --fs-5xl:       4.5rem;
   --fw-light:     300;
   --fw-regular:   400;
   --fw-medium:    500;
   --fw-semibold:  600;
   --fw-bold:      700;
+  --fw-extrabold: 800;
 
   --space-xs:     0.25rem;
   --space-sm:     0.5rem;
@@ -76,13 +81,20 @@ html {
 }
 
 body {
-  font-family: var(--font);
+  font-family: var(--font-body);
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
-  color: var(--grey-800);
+  color: var(--grey-700);
   background: var(--white);
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--grey-900);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 a { text-decoration: none; color: inherit; transition: color var(--duration) var(--ease); }
@@ -143,10 +155,11 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  font-weight: var(--fw-semibold);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
   font-size: var(--fs-md);
   color: var(--grey-900);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .logo-dot {
@@ -284,20 +297,23 @@ ul { list-style: none; }
 }
 
 .hero-name {
-  font-size: var(--fs-4xl);
-  font-weight: var(--fw-bold);
-  color: var(--grey-900);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--black);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
   margin-bottom: var(--space-sm);
   opacity: 0; transform: translateY(16px);
   animation: slideUp 0.6s var(--ease) 0.2s forwards;
 }
 
 .hero-tagline {
+  font-family: var(--font-display);
   font-size: var(--fs-xl);
-  font-weight: var(--fw-light);
-  color: var(--grey-600);
+  font-weight: var(--fw-regular);
+  color: var(--maroon);
+  letter-spacing: 0.02em;
   margin-bottom: var(--space-lg);
   opacity: 0; transform: translateY(12px);
   animation: slideUp 0.6s var(--ease) 0.35s forwards;
@@ -486,10 +502,11 @@ ul { list-style: none; }
 }
 
 .section-title {
+  font-family: var(--font-display);
   font-size: var(--fs-3xl);
-  font-weight: var(--fw-bold);
-  color: var(--grey-900);
-  letter-spacing: -0.02em;
+  font-weight: var(--fw-extrabold);
+  color: var(--black);
+  letter-spacing: -0.03em;
   margin-bottom: var(--space-md);
 }
 
@@ -564,8 +581,9 @@ ul { list-style: none; }
 }
 
 .highlight-card h3 {
-  font-size: var(--fs-base);
-  font-weight: var(--fw-semibold);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
   color: var(--grey-900);
   margin-bottom: var(--space-xs);
 }
@@ -601,12 +619,15 @@ ul { list-style: none; }
 }
 
 .skill-category-title {
-  font-size: var(--fs-sm);
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
-  color: var(--grey-900);
+  color: var(--grey-500);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.12em;
   margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--grey-200);
 }
 
 .skill-tags {
@@ -722,8 +743,9 @@ ul { list-style: none; }
 }
 
 .project-title {
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-semibold);
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
   color: var(--grey-900);
   margin-bottom: var(--space-md);
   padding-right: 60px;
@@ -841,8 +863,9 @@ ul { list-style: none; }
 }
 
 .contact-card h3 {
-  font-size: var(--fs-base);
-  font-weight: var(--fw-semibold);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
   color: var(--grey-900);
   margin-bottom: var(--space-xs);
 }
