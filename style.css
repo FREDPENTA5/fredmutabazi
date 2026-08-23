@@ -14,13 +14,13 @@
   --grey-800:     #424242;
   --grey-900:     #212121;
   --black:        #111111;
-
-  --maroon:       #7B2D3B;
-  --maroon-light: #9C3E50;
-  --maroon-dark:  #5C1F2C;
-  --maroon-bg:    #F9F2F3;
-  --maroon-10:    rgba(123, 45, 59, 0.08);
-  --maroon-20:    rgba(123, 45, 59, 0.15);
+  /* Core Accent: Modern SaaS Crimson */
+  --maroon:       #db2777; /* Punchy pink-crimson */
+  --maroon-light: #f43f5e;
+  --maroon-dark:  #be185d;
+  --maroon-bg:    #fdf2f8;
+  --maroon-10:    rgba(219, 39, 119, 0.08);
+  --maroon-20:    rgba(219, 39, 119, 0.15);
 
   /* Font stack: Outfit for display, Inter for body */
   --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -975,7 +975,8 @@ ul { list-style: none; }
   }
   .nav-links.open { transform: translateY(0); }
   .nav-toggle { display: flex; }
-  .hero-name { font-size: var(--fs-3xl); }
+  .hero-name { font-size: var(--fs-4xl); line-height: 1.1; }
+  .hero-description { font-size: var(--fs-base); }
   .section-title { font-size: var(--fs-2xl); }
   .project-title { padding-right: 0; }
   .project-card-number {
@@ -983,4 +984,5 @@ ul { list-style: none; }
     font-size: var(--fs-xl);
     margin-bottom: var(--space-sm);
   }
+  .nav-logo { font-size: var(--fs-base); }
 }
