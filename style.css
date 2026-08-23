@@ -138,6 +138,7 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   z-index: 1000;
   transition: all var(--duration) var(--ease);
+  padding-top: env(safe-area-inset-top);
 }
 
 .navbar.scrolled {
@@ -149,7 +150,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px var(--space-lg);
+  height: 64px;
 }
 
 .nav-logo {
@@ -166,18 +167,16 @@ ul { list-style: none; }
 .logo-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .logo-subtext {
-  font-family: var(--font-body);
-  font-size: 10px;
+  font-family: var(--font);
+  font-size: 9px;
   font-weight: var(--fw-bold);
   color: var(--maroon);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .nav-links {
