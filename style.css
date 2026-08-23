@@ -961,7 +961,7 @@ ul { list-style: none; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
-  .hero { min-height: auto; padding-top: 80px; padding-bottom: 60px; align-items: flex-start; }
+  .hero { min-height: auto; padding-top: 68px; padding-bottom: 60px; align-items: flex-start; }
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
