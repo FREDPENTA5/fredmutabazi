@@ -975,7 +975,8 @@ ul { list-style: none; }
   }
   .hero-description { margin: 0 auto var(--space-2xl); }
   .hero-actions { justify-content: center; }
-  .hero-stats { justify-content: center; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; gap: var(--space-lg); }
+  .stat-number { font-size: var(--fs-lg); }
   .hero-card { transform: none; max-width: 360px; margin: 0 auto; }
   .about-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
