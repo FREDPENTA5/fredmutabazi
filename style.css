@@ -166,16 +166,18 @@ ul { list-style: none; }
 .logo-wrapper {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  justify-content: center;
+  gap: 2px;
+  line-height: 1;
 }
 
 .logo-subtext {
-  font-family: var(--font);
-  font-size: 9px;
+  font-family: var(--font-body);
+  font-size: 10px;
   font-weight: var(--fw-bold);
   color: var(--maroon);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
 }
 
 .nav-links {
