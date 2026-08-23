@@ -2,38 +2,53 @@ import urllib.request
 import urllib.parse
 import json
 
-# Chart 1: Simple Line Chart
 c1 = {
   "type": "line",
   "data": {
-    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    "labels": ["1","2","3","4","5","6","7","8","9"],
     "datasets": [{
-      "label": "Retention",
-      "data": [100, 85, 75, 70, 68, 65, 63],
-      "borderColor": "#800000",
+      "data": [10, 45, 30, 70, 55, 90, 80, 110, 95],
+      "borderColor": "rgba(128, 0, 0, 0.4)",
+      "borderWidth": 4,
       "fill": True,
-      "backgroundColor": "rgba(128,0,0,0.1)"
+      "backgroundColor": "rgba(128, 0, 0, 0.05)",
+      "tension": 0.4
     }]
+  },
+  "options": {
+    "legend": { "display": False },
+    "scales": {
+      "xAxes": [{ "display": False }],
+      "yAxes": [{ "display": False }]
+    },
+    "elements": { "point": { "radius": 0 } },
+    "layout": { "padding": 50 }
   }
 }
-url1 = "https://quickchart.io/chart?c=" + urllib.parse.quote(json.dumps(c1)) + "&w=1200&h=600&bkg=white"
+url1 = "https://quickchart.io/chart?c=" + urllib.parse.quote(json.dumps(c1)) + "&w=1200&h=1000&bkg=transparent"
 
-# Chart 2: Simple Bar Chart
 c2 = {
   "type": "bar",
   "data": {
-    "labels": ["Q1", "Q2", "Q3", "Q4"],
+    "labels": ["1","2","3","4","5","6","7","8","9","10","11","12"],
     "datasets": [{
-      "label": "Claims",
-      "data": [1200, 1500, 1100, 1800],
-      "backgroundColor": "#222222"
+      "data": [12, 19, 15, 25, 22, 30, 28, 35, 32, 45, 40, 50],
+      "backgroundColor": "rgba(128, 0, 0, 0.15)"
     }]
+  },
+  "options": {
+    "legend": { "display": False },
+    "scales": {
+      "xAxes": [{ "display": False }],
+      "yAxes": [{ "display": False }]
+    },
+    "layout": { "padding": 50 }
   }
 }
-url2 = "https://quickchart.io/chart?c=" + urllib.parse.quote(json.dumps(c2)) + "&w=1200&h=600&bkg=white"
+url2 = "https://quickchart.io/chart?c=" + urllib.parse.quote(json.dumps(c2)) + "&w=1200&h=1000&bkg=transparent"
 
-print("Fetching Chart 1...")
-urllib.request.urlretrieve(url1, "hero_bg1.jpg")
-print("Fetching Chart 2...")
-urllib.request.urlretrieve(url2, "hero_bg2.jpg")
+print("Fetching beautiful Chart 1...")
+urllib.request.urlretrieve(url1, "hero_bg1.png")
+print("Fetching beautiful Chart 2...")
+urllib.request.urlretrieve(url2, "hero_bg2.png")
 print("Done")

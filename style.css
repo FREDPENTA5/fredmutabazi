@@ -261,6 +261,48 @@ ul { list-style: none; }
   background: var(--white);
 }
 
+.hero-slideshow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6; /* Let the maroon colors show clearly */
+}
+
+.hero-slideshow .slide {
+  position: absolute;
+  /* Make it slightly larger than container so scale animation doesn't show edges */
+  top: -5%; left: -5%; width: 110%; height: 110%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.hero-slideshow .slide-1 {
+  background-image: url('hero_bg1.png');
+  animation: slideFade1 16s infinite;
+}
+
+.hero-slideshow .slide-2 {
+  background-image: url('hero_bg2.png');
+  animation: slideFade2 16s infinite;
+}
+
+@keyframes slideFade1 {
+  0%, 45% { opacity: 1; transform: scale(1); }
+  50%, 95% { opacity: 0; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideFade2 {
+  0%, 45% { opacity: 0; transform: scale(1.03); }
+  50%, 95% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.03); }
+}
+
+
+
 .hero-bg-accent {
   position: absolute;
   top: -200px; right: -200px;
