@@ -605,7 +605,8 @@ ul { list-style: none; }
 
 .about-text p {
   margin-bottom: var(--space-lg);
-  color: var(--grey-700);
+  color: var(--grey-900);
+  font-weight: 500;
   line-height: 1.85;
 }
 
@@ -665,7 +666,8 @@ ul { list-style: none; }
 
 .highlight-card p {
   font-size: var(--fs-sm);
-  color: var(--grey-600);
+  font-weight: 500;
+  color: var(--grey-800);
   line-height: 1.6;
 }
 
