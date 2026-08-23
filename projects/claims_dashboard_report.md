@@ -43,7 +43,7 @@ DIVIDE(
 ## 4. Final Dashboard Deliverable
 The dashboard was deployed to the Power BI Service, accessible securely by regional managers.
 
-![Claims Dashboard Mockup](./dashboard.jpg)
+![Claims Volume and Resolution Time](claims_dashboard.png)
 
 ## 5. Business Impact
 *   **Time Saved:** Reduced manual reporting time by **15 hours/week**, fully automating the data refresh.

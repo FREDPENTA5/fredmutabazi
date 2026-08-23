@@ -977,8 +977,7 @@ ul { list-style: none; }
   .hero-description { margin: 0 auto var(--space-2xl); }
   .hero-actions { justify-content: center; }
   .hero-stats { justify-content: center; }
-  .hero-visual { order: -1; }
-  .hero-card { transform: none; max-width: 360px; }
+  .hero-card { transform: none; max-width: 360px; margin: 0 auto; }
   .about-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
